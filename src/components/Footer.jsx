@@ -1,0 +1,18 @@
+function Footer() {
+  return (
+    <footer className='border-t-4 border-blue-500 p-4 flex justify-center'>
+      <p>
+        Reto de{' '}
+        <a className='text-blue-500' href='https://www.aluracursos.com/'>
+          Alura Latam
+        </a>
+        , desarrollado por{' '}
+        <a className='text-blue-500' href='https://github.com/StalinAM'>
+          Stalin
+        </a>
+      </p>
+    </footer>
+  )
+}
+
+export default Footer
