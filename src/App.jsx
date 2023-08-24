@@ -1,3 +1,4 @@
+import Banner from './components/Banner'
 import Button from './components/Button'
 import Category from './components/Category'
 import Footer from './components/Footer'
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <main className='flex flex-col w-full justify-center gap-8 p-4 max-w-4xl mx-auto'>
         {/* <Category title='Front End' color='bg-blue-500' /> */}
+        <Banner />
         <Category title='Back End' color='bg-green-500' />
         {/* <NewProduct /> */}
         {/* <NewCategory /> */}
