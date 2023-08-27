@@ -14,7 +14,7 @@ function App() {
         {/* <Category title='Front End' color='bg-blue-500' /> */}
         <Banner />
         <Category title='Back End' color='bg-green-500' />
-        {/* <NewProduct /> */}
+        <NewProduct />
         {/* <NewCategory /> */}
         <Button name='Añadir video' position='left' />
       </main>
