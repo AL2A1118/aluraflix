@@ -1,4 +1,4 @@
-function Button({ name, position }) {
+function Button({ name, position, handleSubmit }) {
   return (
     <button
       className={`px-4 py-2 ${
@@ -6,6 +6,7 @@ function Button({ name, position }) {
           ? 'bg-blue-500 text-gray-200'
           : 'bg-gray-300 text-gray-950 font-medium'
       } w-full rounded-lg `}
+      onClick={handleSubmit}
     >
       {name}
     </button>
