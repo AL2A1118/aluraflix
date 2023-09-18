@@ -1,5 +1,4 @@
 import Button from './Button'
-import banner from '../assets/banner.webp'
 function Banner() {
   return (
     <section className='relative h-[50vh] flex flex-col justify-end items-center [&>button]:w-auto gap-4'>
