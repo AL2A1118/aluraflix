@@ -50,6 +50,13 @@ function NewProduct() {
         <Button name='Guardar' position='left' handleSubmit={handleSubmit} />
         <Button name='Limpiar' />
       </div>
+      <div>
+        <Button
+          name='Nueva categoría'
+          path='/nueva-categoria'
+          position='left'
+        />
+      </div>
     </section>
   )
 }
