@@ -1,0 +1,66 @@
+{
+  "videos": [
+    {
+      "titulo": "Banco de datos MySQL",
+      "descripcion": "En esta serie de videos en alianza con Oracle, explicaremos y exploraremos las herramientas de Oracle. En este episodio recibimos a Narciso Junior, quien se desempeña como LATAM Cloud Evangelist en la empresa.",
+      "imagen": "https://i.ytimg.com/vi/8J0AoPZMVxA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAUArYg1JDUH2sokYNKsrzDINQ2VQ",
+      "video": "https://www.youtube.com/watch?v=8J0AoPZMVxA&ab_channel=AluraLatam",
+      "categoria": "Backend"
+    },
+    {
+      "titulo": "Accesibilidad Web",
+      "descripcion": "En este Alura+, la instructora Barbara dos Santos y nuestra Scuba Mariana Costa, se juntan para hablar de un tema de extrema importancia para cualquier desarrollador: Accesibilidad Web.",
+      "imagen": "https://i.ytimg.com/vi/ngMOsuZL-XE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBtvexnpgzDc4-AlQJGDPeM1LQs2A",
+      "video": "https://www.youtube.com/watch?v=ngMOsuZL-XE&ab_channel=AluraLatam",
+      "categoria": "Frontend"
+    },
+    {
+      "titulo": "Spring Framework",
+      "descripcion": "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda.",
+      "image": "https://i.ytimg.com/vi/t-iqt1b2qqk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvHzi_mOtKXBpQWhCpa0KUn52vow",
+      "video": "https://www.youtube.com/watch?v=t-iqt1b2qqk&ab_channel=AluraLatam",
+      "categoria": "Desarrollo Móvil"
+    },
+    {
+      "titulo": "¡Domina CSS Flexbox con FlexboxFroggy!",
+      "descripcion": "¿Conoces el término CSS? ¿Sabes que és? En este alura.tips Gabi A entrevista la instructora front end Barbara y aprende sobre el mundo del CSS de una forma muy divertida.",
+      "image": "https://i.ytimg.com/vi/MXPhyN5t0uQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDc4vIbmhlI9zU6noB7oy6kLFaq9g",
+      "video": "https://www.youtube.com/watch?v=MXPhyN5t0uQ&ab_channel=AluraLatam",
+      "categoria": "Frontend"
+    },
+    {
+      "titulo": "Back-End en el Desarrollo Web",
+      "descripcion": "Explorando el poder del Back-End en el Desarrollo Web.",
+      "image": "https://i.ytimg.com/vi/Z024LSCMqFk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-0yHQQfZ3Ga0vTHNGOv1N3MKHIw",
+      "video": "https://www.youtube.com/watch?v=Z024LSCMqFk&ab_channel=AluraLatam",
+      "categoria": "Backend"
+    }
+  ],
+  "categorias": [
+    {
+      "titulo": "Frontend",
+      "descripcion": "Desarrollo de la interfaz de usuario y la interacción del usuario en un sitio web.",
+      "color": "#3498db"
+    },
+    {
+      "titulo": "Backend",
+      "descripcion": "Desarrollo de la lógica y la funcionalidad detrás de un sitio web.",
+      "color": "#2ecc71"
+    },
+    {
+      "titulo": "Full Stack",
+      "descripcion": "Desarrollo tanto del frontend como del backend de un sitio web.",
+      "color": "#e74c3c"
+    },
+    {
+      "titulo": "Diseño UI/UX",
+      "descripcion": "Diseño de la interfaz de usuario y experiencia de usuario.",
+      "color": "#f39c12"
+    },
+    {
+      "titulo": "Desarrollo Móvil",
+      "descripcion": "Desarrollo de aplicaciones móviles para dispositivos iOS y Android.",
+      "color": "#9b59b6"
+    }
+  ]
+}
