@@ -17,21 +17,21 @@
     {
       "titulo": "Spring Framework",
       "descripcion": "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda.",
-      "image": "https://i.ytimg.com/vi/t-iqt1b2qqk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvHzi_mOtKXBpQWhCpa0KUn52vow",
+      "imagen": "https://i.ytimg.com/vi/t-iqt1b2qqk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvHzi_mOtKXBpQWhCpa0KUn52vow",
       "video": "https://www.youtube.com/watch?v=t-iqt1b2qqk&ab_channel=AluraLatam",
       "categoria": "Desarrollo Móvil"
     },
     {
       "titulo": "¡Domina CSS Flexbox con FlexboxFroggy!",
       "descripcion": "¿Conoces el término CSS? ¿Sabes que és? En este alura.tips Gabi A entrevista la instructora front end Barbara y aprende sobre el mundo del CSS de una forma muy divertida.",
-      "image": "https://i.ytimg.com/vi/MXPhyN5t0uQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDc4vIbmhlI9zU6noB7oy6kLFaq9g",
+      "imagen": "https://i.ytimg.com/vi/MXPhyN5t0uQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDc4vIbmhlI9zU6noB7oy6kLFaq9g",
       "video": "https://www.youtube.com/watch?v=MXPhyN5t0uQ&ab_channel=AluraLatam",
       "categoria": "Frontend"
     },
     {
       "titulo": "Back-End en el Desarrollo Web",
       "descripcion": "Explorando el poder del Back-End en el Desarrollo Web.",
-      "image": "https://i.ytimg.com/vi/Z024LSCMqFk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-0yHQQfZ3Ga0vTHNGOv1N3MKHIw",
+      "imagen": "https://i.ytimg.com/vi/Z024LSCMqFk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-0yHQQfZ3Ga0vTHNGOv1N3MKHIw",
       "video": "https://www.youtube.com/watch?v=Z024LSCMqFk&ab_channel=AluraLatam",
       "categoria": "Backend"
     }
