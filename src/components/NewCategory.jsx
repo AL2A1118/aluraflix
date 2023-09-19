@@ -1,5 +1,6 @@
 import Button from './Button'
 import Input from './Input'
+import Table from './Table'
 import TextArea from './TextArea'
 
 function NewCategory() {
@@ -13,6 +14,7 @@ function NewCategory() {
         <Button name='Guardar' position='left' />
         <Button name='Limpiar' />
       </div>
+      <Table />
     </section>
   )
 }
