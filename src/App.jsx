@@ -1,4 +1,6 @@
+import { useContext } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { ApiContext } from './context/Api'
 import Banner from './components/Banner'
 import Button from './components/Button'
 import Category from './components/Category'
@@ -8,6 +10,7 @@ import NewCategory from './components/NewCategory'
 import NewProduct from './components/NewProduct'
 
 function App() {
+  const { categories } = useContext(ApiContext)
   return (
     <>
       <Header />
@@ -18,7 +21,10 @@ function App() {
             element={
               <>
                 <Banner />
-                <Category title='Back End' color='bg-green-500' />
+                {categories &&
+                  categories.map(({ titulo, color, id }) => (
+                    <Category key={id} title={titulo} color={color} />
+                  ))}
                 <Button
                   name='Añadir video'
                   position='left'
