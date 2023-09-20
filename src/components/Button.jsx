@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-function Button({ name, position, handleSubmit, path }) {
+function Button({ name, position, handleClick, path }) {
   return (
     <Link
       className={`px-4 py-2 ${
@@ -8,7 +8,7 @@ function Button({ name, position, handleSubmit, path }) {
           : 'bg-gray-300 text-gray-950 font-medium'
       } w-full rounded-lg flex justify-center`}
       to={path}
-      onClick={handleSubmit}
+      onClick={handleClick}
     >
       {name}
     </Link>
