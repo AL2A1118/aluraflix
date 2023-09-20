@@ -33,7 +33,7 @@ function Table() {
                   {descripcion}
                 </td>
                 <td className='px-0 py-4 flex justify-center gap-2'>
-                  <button className='[&>svg]:stroke-white [&>svg]:w-5'>
+                  <button className='[&>svg]:stroke-white [&>svg]:hover:stroke-red-400 [&>svg]:w-5'>
                     <svg
                       viewBox='0 0 24 24'
                       strokeWidth='2'
@@ -48,7 +48,7 @@ function Table() {
                       <path d='M16 19h6'></path>
                     </svg>
                   </button>
-                  <button className='[&>svg]:stroke-white [&>svg]:w-5'>
+                  <button className='[&>svg]:stroke-white [&>svg]:hover:stroke-red-400  [&>svg]:w-5'>
                     <svg
                       fill='none'
                       stroke='currentColor'
