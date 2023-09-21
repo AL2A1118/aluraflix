@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getDataApi } from '../services/fetchApi'
+import { getDataApi } from '../services/servicesApi'
 
 function useGetData(url) {
   const [data, setData] = useState()
