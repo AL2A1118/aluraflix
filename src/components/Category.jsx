@@ -4,7 +4,9 @@ import { ApiContext } from '../context/Api'
 
 function Category({ title, color }) {
   const { videos } = useContext(ApiContext)
-  const listImage = videos?.filter(({ categoria }) => categoria === title)
+  const listImage = videos?.filter(
+    ({ categoria }) => categoria.toLowerCase() === title.toLowerCase()
+  )
   return (
     <section className='flex flex-col gap-2 max-w-4xl overflow-hidden'>
       <div

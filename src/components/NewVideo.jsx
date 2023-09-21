@@ -4,6 +4,7 @@ import Input from './Input'
 import TextArea from './TextArea'
 import { v4 as uuidv4 } from 'uuid'
 import { postDataApi } from '../services/servicesApi'
+import SelectCategory from './SelectCategory'
 const URL_VIDEOS = 'http://localhost:3000/videos'
 function NewVideo() {
   const [infoVideo, setInfoVideo] = useState({
@@ -51,6 +52,7 @@ function NewVideo() {
           value={infoVideo.video}
           handleChange={handleInputChange}
         />
+        <SelectCategory />
         <Input
           name='imagen'
           label='Link imagen del video'
