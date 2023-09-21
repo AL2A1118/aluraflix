@@ -2,68 +2,66 @@ import { useState } from 'react'
 import Button from './Button'
 import Input from './Input'
 import TextArea from './TextArea'
-
-function NewProduct() {
-  const [infoProduct, setInfoProduct] = useState({
-    title: '',
-    description: '',
-    linkVideo: '',
-    linkImage: '',
-    user: ''
+import { v4 as uuidv4 } from 'uuid'
+import { postDataApi } from '../services/servicesApi'
+const URL_VIDEOS = 'http://localhost:3000/videos'
+function NewVideo() {
+  const [infoVideo, setInfoVideo] = useState({
+    titulo: '',
+    descripcion: '',
+    video: '',
+    imagen: ''
   })
   const handleInputChange = (e) => {
     const { name, value } = e.target
-    setInfoProduct((prevState) => ({
+    setInfoVideo((prevState) => ({
       ...prevState,
       [name]: value
     }))
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(infoProduct)
+    const newVideo = {
+      id: uuidv4(),
+      ...infoVideo
+    }
+    postDataApi(URL_VIDEOS, newVideo)
   }
   const handleClick = () => {
-    setInfoProduct({
-      title: '',
-      linkVideo: '',
-      linkImage: '',
-      user: '',
-      description: ''
+    setInfoVideo({
+      titulo: '',
+      video: '',
+      imagen: '',
+      descripcion: ''
     })
   }
   return (
-    <section className='flex flex-col gap-4 '>
+    <section className='flex flex-col gap-4 mt-10'>
       <form className='flex flex-col gap-4 ' action='submit'>
         <h2 className='text-xl text-blue-400 font-medium'>Nuevo producto</h2>
         <Input
-          name='title'
+          name='titulo'
           label='Título'
-          value={infoProduct.title}
+          value={infoVideo.titulo}
           handleChange={handleInputChange}
         />
         <Input
-          name='linkVideo'
+          name='video'
           label='Link del video'
-          value={infoProduct.linkVideo}
+          value={infoVideo.video}
           handleChange={handleInputChange}
         />
         <Input
-          name='linkImage'
+          name='imagen'
           label='Link imagen del video'
-          value={infoProduct.linkImage}
+          value={infoVideo.imagen}
           handleChange={handleInputChange}
         />
         <TextArea
-          name='description'
+          name='descripcion'
           label='Descripción'
-          value={infoProduct.description}
+          value={infoVideo.descripcion}
           handleInputChange={handleInputChange}
-        />
-        <Input
-          name='user'
-          label='Usuario'
-          value={infoProduct.user}
-          handleChange={handleInputChange}
         />
         <div className='flex gap-4'>
           <Button name='Guardar' position='left' handleClick={handleSubmit} />
@@ -81,4 +79,4 @@ function NewProduct() {
   )
 }
 
-export default NewProduct
+export default NewVideo
