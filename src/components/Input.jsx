@@ -10,6 +10,7 @@ function Input({ label, name, value, handleChange }) {
         name={name}
         type='text'
         onChange={handleChange}
+        required
       />
     </div>
   )

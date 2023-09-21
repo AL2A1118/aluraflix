@@ -11,6 +11,7 @@ function TextArea({ label, name, handleInputChange, value }) {
         type='text'
         value={value}
         onChange={handleInputChange}
+        required
       />
     </div>
   )
