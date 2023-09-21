@@ -8,8 +8,7 @@ function NewCategory() {
   const [infoCategory, setInfoCategory] = useState({
     title: '',
     color: '',
-    description: '',
-    user: ''
+    description: ''
   })
   const handleOnChange = (e) => {
     const { name, value } = e.target
@@ -26,12 +25,11 @@ function NewCategory() {
     setInfoCategory({
       title: '',
       color: '',
-      description: '',
-      user: ''
+      description: ''
     })
   }
   return (
-    <section className='flex flex-col gap-4'>
+    <section className='flex flex-col gap-4 mt-10'>
       <form className='flex flex-col gap-4' action='submit'>
         <h2 className='text-xl text-blue-400 font-medium'>Nuevo producto</h2>
         <Input
@@ -57,12 +55,6 @@ function NewCategory() {
           name='description'
           value={infoCategory.description}
           handleInputChange={handleOnChange}
-        />
-        <Input
-          label='Usuario'
-          name='user'
-          value={infoCategory.user}
-          handleChange={handleOnChange}
         />
         <div className='flex gap-4'>
           <Button name='Guardar' position='left' handleClick={handleSubmit} />
