@@ -1,6 +1,10 @@
-import Slider from './Slider'
+import { useContext } from 'react'
+import Carousel from './Carousel'
+import { ApiContext } from '../context/Api'
 
 function Category({ title, color }) {
+  const { videos } = useContext(ApiContext)
+  const listImage = videos?.filter(({ categoria }) => categoria === title)
   return (
     <section className='flex flex-col gap-2 max-w-4xl overflow-hidden'>
       <div
@@ -10,7 +14,7 @@ function Category({ title, color }) {
         <h2>{title}</h2>
       </div>
       <p className='text-sm'>Formación {title} de Alura Latam</p>
-      <Slider color={color} title={title} />
+      <Carousel listImage={listImage} color={color} />
     </section>
   )
 }
