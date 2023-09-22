@@ -17,14 +17,6 @@
       "categoria": "Frontend"
     },
     {
-      "id": 3,
-      "titulo": "Spring Framework",
-      "descripcion": "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda.",
-      "imagen": "https://i.ytimg.com/vi/t-iqt1b2qqk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvHzi_mOtKXBpQWhCpa0KUn52vow",
-      "video": "https://www.youtube.com/watch?v=t-iqt1b2qqk&ab_channel=AluraLatam",
-      "categoria": "Desarrollo Móvil"
-    },
-    {
       "id": 4,
       "titulo": "¡Domina CSS Flexbox con FlexboxFroggy!",
       "descripcion": "¿Conoces el término CSS? ¿Sabes que és? En este alura.tips Gabi A entrevista la instructora front end Barbara y aprende sobre el mundo del CSS de una forma muy divertida.",
@@ -39,6 +31,38 @@
       "imagen": "https://i.ytimg.com/vi/Z024LSCMqFk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-0yHQQfZ3Ga0vTHNGOv1N3MKHIw",
       "video": "https://www.youtube.com/watch?v=Z024LSCMqFk&ab_channel=AluraLatam",
       "categoria": "Backend"
+    },
+    {
+      "id": 6,
+      "titulo": "¿Qué es SQL y NoSQL?",
+      "descripcion": "¿Cuáles son las diferencias entre una estructura de datos relacional (SQL) y una no relacional (NoSQL) y cuáles son las principales ventajas de cada una? Álvaro Camacho lo explica en este vídeo.",
+      "imagen": "https://i.ytimg.com/vi/cLLKVd5CNLc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoAq6RVkWNnROKxhWbny5h0GbMwA",
+      "video": "https://www.youtube.com/watch?v=cLLKVd5CNLc&t=1s&ab_channel=AluraLatam",
+      "categoria": "Backend"
+    },
+    {
+      "id": 7,
+      "titulo": "Cuándo usar let, var y const?",
+      "descripcion": "¿A veces cuando estás programando sientes dificuldades en saber en qué momento utilizar let, var o const para declarar una variable? En este video te sacamos estas dudas, además de explicarte lo que es escopo global y local en JavaScript.",
+      "imagen": "https://i.ytimg.com/vi/PztCEdIJITY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2qK3Zjt_Y4Di7_0Hv5sJjrvkosQ",
+      "video": "https://www.youtube.com/watch?v=PztCEdIJITY&t=417s&ab_channel=AluraLatam",
+      "categoria": "Backend"
+    },
+    {
+      "id": 8,
+      "titulo": "¿Qué es JavaScript?",
+      "descripcion": "JavaScript: ¿qué es y cómo se hizo este lenguaje que genera muchas discusiones y debates entre la gente del área de desarrollo? Genesys y Gabriela nos hablan exactamente de esto en este Alura Tips.",
+      "imagen": "https://i.ytimg.com/vi/GJfOSoaXk4s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAKpxz6vMwTw26HQyprrrwHFadQ2g",
+      "video": "https://www.youtube.com/watch?v=GJfOSoaXk4s&ab_channel=AluraLatam",
+      "categoria": "Frontend"
+    },
+    {
+      "id": 9,
+      "titulo": "Equipo Front End",
+      "descripcion": "¿Estás empezando tus estudios de Programación? ¿Te interesa todo lo que es la creación de Páginas Web Desarrollo de Softwares? ¿O estás pensando en cambiar de carrera y entrar a la maravillosa area de tecnología?",
+      "imagen": "https://i.ytimg.com/vi/rpvrLaBQwgg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJK_72imvkPUftCR6i52lfmAwR2A",
+      "video": "https://www.youtube.com/watch?v=rpvrLaBQwgg&ab_channel=AluraLatam",
+      "categoria": "Frontend"
     }
   ],
   "categorias": [
@@ -56,21 +80,9 @@
     },
     {
       "id": 3,
-      "titulo": "Full Stack",
-      "descripcion": "Desarrollo tanto del frontend como del backend de un sitio web.",
+      "titulo": "innovación y gestión",
+      "descripcion": "Implementación de estrategias y procesos para fomentar la creatividad y eficiencia en una organización, así como el desarrollo tanto del frontend como del backend de un sitio web.",
       "color": "#e74c3c"
-    },
-    {
-      "id": 4,
-      "titulo": "Diseño UI/UX",
-      "descripcion": "Diseño de la interfaz de usuario y experiencia de usuario.",
-      "color": "#f39c12"
-    },
-    {
-      "id": 5,
-      "titulo": "Desarrollo Móvil",
-      "descripcion": "Desarrollo de aplicaciones móviles para dispositivos iOS y Android.",
-      "color": "#9b59b6"
     }
   ]
 }
