@@ -4,39 +4,35 @@ export const getDataApi = async (URL_API) => {
   return data
 }
 
-export const postDataApi = (URL_API, formData) => {
-  fetch(URL_API, {
+export const postDataApi = async (URL_API, formData) => {
+  const response = await fetch(URL_API, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(formData)
   })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log('Nuevo elemento creado:', data)
-    })
+  const data = await response.json()
+  console.log('Nuevo elemento creado:', data)
+  return data
 }
 
-export const putDataApi = (URL_API, formData) => {
-  fetch(`${URL_API}${formData.id}`, {
+export const putDataApi = async (URL_API, formData) => {
+  const response = await fetch(`${URL_API}/${formData.id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(formData)
   })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log('Elemento actualizado:', data)
-    })
+  const data = await response.json()
+  console.log('Nuevo elemento actualizado:', data)
+  return data
 }
-export const deleteDataApi = (URL_API, formData) => {
-  fetch(`${URL_API}${formData.id}`, {
+export const deleteDataApi = async (URL_API, id) => {
+  const response = await fetch(`${URL_API}/${id}`, {
     method: 'DELETE'
   })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log('Elemento eliminado:', data)
-    })
+  const data = response.json()
+  console.log('Elemento eliminado:', data)
 }
