@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Button from './Button'
 import Input from './Input'
 import TextArea from './TextArea'
 import { v4 as uuidv4 } from 'uuid'
 import { postDataApi } from '../services/servicesApi'
 import SelectCategory from './SelectCategory'
+import { ApiContext } from '../context/Api'
 const URL_VIDEOS = 'http://localhost:3000/videos'
 
 function NewVideo() {
+  const { refreshListVideos } = useContext(ApiContext)
   const [infoVideo, setInfoVideo] = useState({
     titulo: '',
     descripcion: '',
@@ -22,13 +24,21 @@ function NewVideo() {
       [name]: value
     }))
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const newVideo = {
       id: uuidv4(),
       ...infoVideo
     }
-    postDataApi(URL_VIDEOS, newVideo)
+    await postDataApi(URL_VIDEOS, newVideo)
+    refreshListVideos()
+    setInfoVideo({
+      titulo: '',
+      video: '',
+      imagen: '',
+      descripcion: '',
+      categoria: ''
+    })
   }
   const handleClick = () => {
     setInfoVideo({
@@ -68,18 +78,20 @@ function NewVideo() {
           value={infoVideo.descripcion}
           handleInputChange={handleInputChange}
         />
-        <div className='flex gap-4'>
-          <Button name='Guardar' position='left' handleClick={handleSubmit} />
-          <Button name='Limpiar' handleClick={handleClick} />
+        <div className='flex gap-4 md:justify-between md:flex-row flex-col'>
+          <div className='flex gap-4'>
+            <Button name='Guardar' position='left' handleClick={handleSubmit} />
+            <Button name='Limpiar' handleClick={handleClick} />
+          </div>
+          <div>
+            <Button
+              name='Nueva categoría'
+              path='/nueva-categoria'
+              position='left'
+            />
+          </div>
         </div>
       </form>
-      <div>
-        <Button
-          name='Nueva categoría'
-          path='/nueva-categoria'
-          position='left'
-        />
-      </div>
     </section>
   )
 }
