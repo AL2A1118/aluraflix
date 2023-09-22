@@ -13,7 +13,6 @@ export const postDataApi = async (URL_API, formData) => {
     body: JSON.stringify(formData)
   })
   const data = await response.json()
-  console.log('Nuevo elemento creado:', data)
   return data
 }
 
@@ -26,7 +25,6 @@ export const putDataApi = async (URL_API, formData) => {
     body: JSON.stringify(formData)
   })
   const data = await response.json()
-  console.log('Nuevo elemento actualizado:', data)
   return data
 }
 export const deleteDataApi = async (URL_API, id) => {
@@ -34,5 +32,4 @@ export const deleteDataApi = async (URL_API, id) => {
     method: 'DELETE'
   })
   const data = response.json()
-  console.log('Elemento eliminado:', data)
 }
