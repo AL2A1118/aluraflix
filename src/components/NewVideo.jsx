@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { postDataApi } from '../services/servicesApi'
 import SelectCategory from './SelectCategory'
 const URL_VIDEOS = 'http://localhost:3000/videos'
+
 function NewVideo() {
   const [infoVideo, setInfoVideo] = useState({
     titulo: '',
@@ -26,7 +27,8 @@ function NewVideo() {
       id: uuidv4(),
       ...infoVideo
     }
-    postDataApi(URL_VIDEOS, newVideo)
+    // postDataApi(URL_VIDEOS, newVideo)
+    console.log(newVideo)
   }
   const handleClick = () => {
     setInfoVideo({
@@ -46,13 +48,13 @@ function NewVideo() {
           value={infoVideo.titulo}
           handleChange={handleInputChange}
         />
+        <SelectCategory setInfoVideo={setInfoVideo} infoVideo={infoVideo} />
         <Input
           name='video'
           label='Link del video'
           value={infoVideo.video}
           handleChange={handleInputChange}
         />
-        <SelectCategory />
         <Input
           name='imagen'
           label='Link imagen del video'
