@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className='flex flex-col w-full justify-center gap-8 px-4 pb-4 max-w-4xl mx-auto relative overflow-hidden'>
+      <main className='flex flex-col w-full justify-center gap-8 px-4 pb-4 max-w-6xl mx-auto relative overflow-hidden min-h-[calc(100vh-170px)]'>
         <Routes>
           <Route
             path='/'
@@ -25,12 +25,14 @@ function App() {
                   categories?.map(({ titulo, color, id }) => (
                     <Category key={id} title={titulo} color={color} />
                   ))}
-                <Button
-                  name='Añadir video'
-                  position='left'
-                  path='/nuevo-video'
-                  handle
-                />
+                <div className='md:hidden'>
+                  <Button
+                    name='Añadir video'
+                    position='left'
+                    path='/nuevo-video'
+                    handle
+                  />
+                </div>
               </>
             }
           />
