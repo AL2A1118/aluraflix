@@ -13,7 +13,7 @@ function Category({ title, color }) {
         className='py-1 px-3 text-slate-200 rounded-lg w-max'
         style={{ backgroundColor: color }}
       >
-        <h2>{title}</h2>
+        <h2 className='capitalize'>{title}</h2>
       </div>
       <p className='text-sm'>Formación {title} de Alura Latam</p>
       <Carousel listImage={listImage} color={color} />
