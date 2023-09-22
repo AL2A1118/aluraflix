@@ -31,7 +31,7 @@ function Carousel({ color, listImage }) {
     <Slider {...settings}>
       {listImage &&
         listImage.map(({ imagen, id }) => (
-          <li key={id}>
+          <li key={id} className='cursor-pointer'>
             <img
               className='border-2 rounded '
               style={{ borderColor: color }}
