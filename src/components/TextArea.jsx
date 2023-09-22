@@ -6,7 +6,7 @@ function TextArea({ label, name, handleInputChange, value }) {
       </label>
       <textarea
         name={name}
-        className='bg-transparent focus-visible:outline-none text-slate-100'
+        className='bg-transparent focus-visible:outline-none text-slate-100 resize-none'
         rows={5}
         type='text'
         value={value}
