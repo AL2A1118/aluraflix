@@ -3,12 +3,15 @@ import Button from './Button'
 import Input from './Input'
 import Table from './Table'
 import TextArea from './TextArea'
+import { postDataApi } from '../services/servicesApi'
+import { v4 as uuidv4 } from 'uuid'
+const URL_CATEGORIES = 'http://localhost:3000/categorias'
 
 function NewCategory() {
   const [infoCategory, setInfoCategory] = useState({
-    title: '',
+    titulo: '',
     color: '',
-    description: ''
+    descripcion: ''
   })
   const handleOnChange = (e) => {
     const { name, value } = e.target
@@ -19,13 +22,17 @@ function NewCategory() {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(infoCategory)
+    const newCategory = {
+      id: uuidv4(),
+      ...infoCategory
+    }
+    postDataApi(URL_CATEGORIES, newCategory)
   }
   const handleClick = () => {
     setInfoCategory({
-      title: '',
+      titulo: '',
       color: '',
-      description: ''
+      descripcion: ''
     })
   }
   return (
@@ -34,8 +41,8 @@ function NewCategory() {
         <h2 className='text-xl text-blue-400 font-medium'>Nuevo producto</h2>
         <Input
           label='Título'
-          name='title'
-          value={infoCategory.title}
+          name='titulo'
+          value={infoCategory.titulo}
           handleChange={handleOnChange}
         />
         <div className='relative w-full'>
@@ -52,8 +59,8 @@ function NewCategory() {
         </div>
         <TextArea
           label='Descripción'
-          name='description'
-          value={infoCategory.description}
+          name='descripcion'
+          value={infoCategory.descripcion}
           handleInputChange={handleOnChange}
         />
         <div className='flex gap-4'>
