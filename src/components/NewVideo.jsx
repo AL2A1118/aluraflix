@@ -12,7 +12,8 @@ function NewVideo() {
     titulo: '',
     descripcion: '',
     video: '',
-    imagen: ''
+    imagen: '',
+    categoria: ''
   })
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -27,15 +28,15 @@ function NewVideo() {
       id: uuidv4(),
       ...infoVideo
     }
-    // postDataApi(URL_VIDEOS, newVideo)
-    console.log(newVideo)
+    postDataApi(URL_VIDEOS, newVideo)
   }
   const handleClick = () => {
     setInfoVideo({
       titulo: '',
       video: '',
       imagen: '',
-      descripcion: ''
+      descripcion: '',
+      categoria: ''
     })
   }
   return (
