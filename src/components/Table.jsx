@@ -1,8 +1,14 @@
-import { useContext } from 'react'
-import { ApiContext } from '../context/Api'
-
-function Table() {
-  const { categories } = useContext(ApiContext)
+function Table({
+  setInfoCategory,
+  setEditCategory,
+  categories,
+  deleteCategory
+}) {
+  const editCategory = (id) => {
+    const oldCategory = categories?.filter((item) => item.id === id)[0]
+    setInfoCategory(oldCategory)
+    setEditCategory(true)
+  }
   return (
     <div className='relative overflow-x-auto mt-6 rounded border-2 border-slate-600'>
       <table className='w-full text-sm text-left text-slate-300'>
@@ -21,7 +27,7 @@ function Table() {
         </thead>
         <tbody>
           {categories &&
-            categories.map(({ titulo, descripcion }, id) => (
+            categories.map(({ titulo, descripcion, id }) => (
               <tr
                 key={id}
                 className=' border-b bg-transparent border-slate-600'
@@ -33,7 +39,10 @@ function Table() {
                   {descripcion}
                 </td>
                 <td className='px-0 py-4 flex justify-center gap-2'>
-                  <button className='[&>svg]:stroke-white [&>svg]:hover:stroke-red-400 [&>svg]:w-5'>
+                  <button
+                    className='[&>svg]:stroke-white [&>svg]:hover:stroke-red-400 [&>svg]:w-5'
+                    onClick={() => editCategory(id)}
+                  >
                     <svg
                       viewBox='0 0 24 24'
                       strokeWidth='2'
@@ -48,7 +57,10 @@ function Table() {
                       <path d='M16 19h6'></path>
                     </svg>
                   </button>
-                  <button className='[&>svg]:stroke-white [&>svg]:hover:stroke-red-400  [&>svg]:w-5'>
+                  <button
+                    className='[&>svg]:stroke-white [&>svg]:hover:stroke-red-400  [&>svg]:w-5'
+                    onClick={() => deleteCategory(id)}
+                  >
                     <svg
                       fill='none'
                       stroke='currentColor'
