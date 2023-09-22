@@ -17,10 +17,10 @@ function Table({
             <th scope='col' className='px-4 py-3'>
               Nombre
             </th>
-            <th scope='col' className='px-4 py-3'>
+            <th scope='col' className='pr-4 py-3'>
               Descripción
             </th>
-            <th scope='col' className='px-4 py-3'>
+            <th scope='col' className='px-4 py-3 text-center'>
               Editar
             </th>
           </tr>
@@ -32,10 +32,10 @@ function Table({
                 key={id}
                 className=' border-b bg-transparent border-slate-600'
               >
-                <td className='px-4 py-4 max-w-[60px] whitespace-nowrap overflow-hidden text-ellipsis'>
+                <td className='px-4 py-4 max-w-[60px] md:max-w-[100px] whitespace-nowrap overflow-hidden text-ellipsis'>
                   {titulo}
                 </td>
-                <td className='px-0 py-4 max-w-[100px] whitespace-nowrap overflow-hidden text-ellipsis'>
+                <td className='px-0 py-4 max-w-[130px] md:max-w-[400px] whitespace-nowrap overflow-hidden text-ellipsis'>
                   {descripcion}
                 </td>
                 <td className='px-0 py-4 flex justify-center gap-2'>

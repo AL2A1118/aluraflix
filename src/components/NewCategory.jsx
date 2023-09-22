@@ -87,7 +87,7 @@ function NewCategory() {
           value={infoCategory.descripcion}
           handleInputChange={handleOnChange}
         />
-        <div className='flex gap-4'>
+        <div className='flex gap-4 justify-start'>
           <Button name='Guardar' position='left' handleClick={handleSubmit} />
           <Button name='Limpiar' handleClick={cleanForm} />
         </div>
