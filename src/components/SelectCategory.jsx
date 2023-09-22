@@ -10,7 +10,12 @@ function SelectCategory({ infoVideo, setInfoVideo }) {
         className='flex w-full justify-between items-center cursor-pointer'
         onClick={() => setActive(!active)}
       >
-        <span className='text-sm'>Escoja una categoría</span>
+        {infoVideo.categoria === '' ? (
+          <span className='text-sm'>Seleccione una categoría</span>
+        ) : (
+          <span className='text-slate-100'>{infoVideo.categoria}</span>
+        )}
+
         {active ? (
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -50,7 +55,10 @@ function SelectCategory({ infoVideo, setInfoVideo }) {
                 className='px-[6px] py-1 hover:bg-blue-500 rounded cursor-pointer capitalize'
                 onClick={() => {
                   setActive(!active)
-                  setInfoVideo({ categoria: titulo, ...infoVideo })
+                  setInfoVideo((prevInfo) => ({
+                    ...prevInfo,
+                    categoria: titulo
+                  }))
                 }}
                 key={id}
               >
