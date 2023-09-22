@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Button from './Button'
 import Input from './Input'
 import Table from './Table'
 import TextArea from './TextArea'
-import { postDataApi } from '../services/servicesApi'
+import { deleteDataApi, postDataApi, putDataApi } from '../services/servicesApi'
 import { v4 as uuidv4 } from 'uuid'
+import { ApiContext } from '../context/Api'
 const URL_CATEGORIES = 'http://localhost:3000/categorias'
 
 function NewCategory() {
+  const { categories, refreshListCategories } = useContext(ApiContext)
+  const [editCategory, setEditCategory] = useState(false)
   const [infoCategory, setInfoCategory] = useState({
     titulo: '',
     color: '',
@@ -20,20 +23,41 @@ function NewCategory() {
       [name]: value
     }))
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    const newCategory = {
-      id: uuidv4(),
-      ...infoCategory
+    if (!editCategory) {
+      const newCategory = {
+        id: uuidv4(),
+        ...infoCategory
+      }
+      await postDataApi(URL_CATEGORIES, newCategory)
+      refreshListCategories()
+      setInfoCategory({
+        titulo: '',
+        color: '',
+        descripcion: ''
+      })
+      return
     }
-    postDataApi(URL_CATEGORIES, newCategory)
-  }
-  const handleClick = () => {
+    await putDataApi(URL_CATEGORIES, infoCategory)
+    refreshListCategories()
     setInfoCategory({
       titulo: '',
       color: '',
       descripcion: ''
     })
+  }
+
+  const cleanForm = () => {
+    setInfoCategory({
+      titulo: '',
+      color: '',
+      descripcion: ''
+    })
+  }
+  const deleteCategory = async (id) => {
+    await deleteDataApi(URL_CATEGORIES, id)
+    refreshListCategories()
   }
   return (
     <section className='flex flex-col gap-4 mt-10'>
@@ -65,10 +89,18 @@ function NewCategory() {
         />
         <div className='flex gap-4'>
           <Button name='Guardar' position='left' handleClick={handleSubmit} />
-          <Button name='Limpiar' handleClick={handleClick} />
+          <Button name='Limpiar' handleClick={cleanForm} />
         </div>
       </form>
-      <Table />
+      {categories && (
+        <Table
+          setInfoCategory={setInfoCategory}
+          setEditCategory={setEditCategory}
+          url={URL_CATEGORIES}
+          categories={categories}
+          deleteCategory={deleteCategory}
+        />
+      )}
     </section>
   )
 }
