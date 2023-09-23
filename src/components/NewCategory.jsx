@@ -6,7 +6,7 @@ import TextArea from './TextArea'
 import { deleteDataApi, postDataApi, putDataApi } from '../services/servicesApi'
 import { v4 as uuidv4 } from 'uuid'
 import { ApiContext } from '../context/Api'
-const URL_CATEGORIES = 'http://localhost:3000/categorias'
+const URL_CATEGORIES = 'https:/api-alura-flix.vercel.app/categorias'
 
 function NewCategory() {
   const { categories, refreshListCategories } = useContext(ApiContext)
