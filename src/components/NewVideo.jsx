@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { postDataApi } from '../services/servicesApi'
 import SelectCategory from './SelectCategory'
 import { ApiContext } from '../context/Api'
-const URL_VIDEOS = 'http://localhost:3000/videos'
+const URL_VIDEOS = 'https://api-alura-flix.vercel.app/videos'
 
 function NewVideo() {
   const { refreshListVideos } = useContext(ApiContext)
