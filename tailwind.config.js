@@ -5,9 +5,6 @@ export default {
     fontFamily: {
       sans: ['Roboto Flex Variable']
     },
-    backgroundImage: {
-      banner: "url('./src/assets/banner.webp')"
-    },
     extend: {}
   },
   plugins: []
