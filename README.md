@@ -2,7 +2,7 @@
 
 ![](./public/desktop.webp)
 
-El objetivo de este reto es construir una plataforma similar a Netflix, pero enfocada en los cursos de Alura. Aquí los usuarios podrán explorar una amplia gama de cursos organizados por categorías, y tendrán la capacidad de contribuir al contenido al agregar nuevos videos y categorías.
+El objetivo de este reto es construir una plataforma similar a Netflix, pero enfocada en los cursos de Alura. Aquí los usuarios podrán explorar una amplia gama de cursos organizados por categorías, y tendrán la capacidad de contribuir al contenido al agregar nuevos videos y categorías.👨🏻‍🏫
 
 ## Table of contents
 
@@ -47,7 +47,7 @@ Brinda la capacidad de agregar nuevos videos a la plataforma, asociándolos con 
 Implementa un sistema de rutas que permite a los usuarios moverse fácilmente entre las diferentes secciones de la aplicación.
 Garantiza una experiencia de usuario fluida y sin contratiempos.
 
-#### Integración con el Servidor
+#### 🛠Integración con el Servidor
 
 Se ha implementado un custom hook y contexto para realizar llamadas a la API de forma eficiente y mantener un estado global actualizado.
 
